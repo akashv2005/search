@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #45a049;
+    --background-color: #121212;
+    --surface-color: #1E1E1E;
+    --on-surface-color: #E0E0E0;
+    --text-color: #FFFFFF;
+    --card-background: #2C2C2C;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: var(--background-color);
+    color: var(--text-color); */
+    background-image: url('https://static.vecteezy.com/system/resources/previews/005/592/482/original/abstract-dark-purple-background-overlap-layer-on-dark-space-for-background-design-exclusive-wallpaper-design-for-poster-brochure-presentation-website-etc-vector.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    text-align: center; 
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: var(--surface-color);
+    justify-content: center; /* Center align search elements */
+}
+
+.search-container:focus-within {
+    box-shadow: 0 6px 8px var(--shadow-color);
+}
+
+#searchInput {
+    flex-grow: 1;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: var(--surface-color);
+    color: var(--on-surface-color);
+    text-align: center; /* Center align input text */
+}
+
+#searchInput::placeholder {
+    color: #6E6E6E;
+}
+
+#searchButton {
+    padding: 15px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: var(--secondary-color);
+}
+
+#searchButton svg {
+    width: 20px;
+    height: 20px;
+}
+
+.history-container {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+h2 {
+    color: var(--primary-color);
+    font-weight: 400;
+    margin-top: 0;
+}
+
+#searchHistory {
+    list-style-type: none;
+    padding: 0;
+}
+
+#searchHistory li {
+    padding: 10px 0;
+    border-bottom: 1px solid #3E3E3E;
+    transition: background-color 0.3s ease;
+    color: var(--on-surface-color);
+    text-align: center; 
+}
+
+#searchHistory li:hover {
+    background-color: #3E3E3E;
+}
+
+#clearHistoryButton {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #424242;
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#clearHistoryButton:hover {
+    background-color: #616161;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#searchHistory li {
+    animation: fadeIn 0.3s ease-out forwards;
+}
